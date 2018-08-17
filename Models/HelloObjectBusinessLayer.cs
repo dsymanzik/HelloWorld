@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HelloWorld.Infrastructure;
 using HelloWorld.Domain.Entities;
 using HelloWorld.Domain.Abstract;
 
-namespace HelloWorld.Infrastructure
+namespace HelloWorld.Models
 {
     public class HelloObjectBusinessLayer : IHelloObjectBusinessLayer
     {

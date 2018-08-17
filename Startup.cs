@@ -15,8 +15,8 @@ using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using SimpleInjector.Integration.AspNetCore.Mvc;
 using HelloWorld.Domain.Abstract;
-using HelloWorld.Domain.Entities;
 using HelloWorld.Infrastructure;
+using HelloWorld.Models;
 
 namespace HelloWorld
 {
@@ -64,10 +64,6 @@ namespace HelloWorld
 
             InitializeContainer(app);
 
-            // Add custom middleware
-            //app.UseMiddleware<CustomMiddleware1>(container);
-            //app.UseMiddleware<CustomMiddleware2>(container);
-
             container.Verify();
 
             // ASP.NET default stuff here
@@ -90,7 +86,7 @@ namespace HelloWorld
             container.RegisterMvcControllers(app);
             container.RegisterMvcViewComponents(app);
 
-            // Add application services. For instance:
+            // I didn't bother with batch registration here because there was only two.
             container.Register<IHelloObjectDataAccessLayer, HelloObjectDataAccessLayer>();
             container.Register<IHelloObjectBusinessLayer, HelloObjectBusinessLayer>();
 

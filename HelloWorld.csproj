@@ -5,9 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="API\" />
-    <Folder Include="Models\" />
-    <Folder Include="Presentation\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

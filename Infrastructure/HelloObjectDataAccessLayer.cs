@@ -11,6 +11,7 @@ namespace HelloWorld.Infrastructure
     {
         public async Task<HelloObject> GetHelloObjectInformationAsync()
         {
+            //This is the mocked async method. I'm using a HelloObject to pass "Hello World!" to the API.
             return await Task.FromResult(new HelloObject
             {
                 Id = 1,
